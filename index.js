@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 })
 
 app.get(/^\/([^\/]*)\/?(.*)$/, function (req, res) {
-  console.log('params:',typeof req.params,req.params)
+  console.log('params:',Array.isArray(req.params),req.params)
   res.send('Hello World!')
 })
 
